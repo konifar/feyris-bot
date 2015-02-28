@@ -10,6 +10,23 @@
 
 module.exports = (robot) ->
 
+  robot.hear /(おはよ|おっはー)/i, (msg) ->
+    msg.send msg.random [
+      "おはようニャ！"
+    ]
+
+  robot.hear /Success:  .*. build/i, (msg) ->
+    msg.send msg.random [
+        "テストもばっちりニャ！",
+        "いい感じニャ！"
+    ]
+
+  robot.hear /Failed:  .*. build/i, (msg) ->
+    msg.send msg.random [
+        "気付いていないなんて言わせないニャ。",
+        "ごめんなさいニャ～。"
+    ]
+
   # robot.hear /badger/i, (msg) ->
   #   msg.send "Badgers? BADGERS? WE DON'T NEED NO STINKIN BADGERS"
   #
