@@ -27,6 +27,11 @@ module.exports = (robot) ->
         "ごめんなさいニャ～。"
     ]
 
+  robot.hear /(フェイリス|eyris).*.(テストケース|testcase|test case)/, (msg) ->
+    msg.send msg.random [
+        "了解ニャ！頑張ってニャー！\nhttps://docs.google.com/spreadsheets/d/1Jh8cHPoxFZiJPV4tlI0gJPcO4j5Zi90iEVwiFYeRY4g/edit#gid=0"
+    ]
+
   # robot.hear /badger/i, (msg) ->
   #   msg.send "Badgers? BADGERS? WE DON'T NEED NO STINKIN BADGERS"
   #
